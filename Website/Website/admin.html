@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/admin.css">
+    <title>Admin</title>
+</head>
+<body>
+    <header class="display-flex">
+        <a href="#" class="adminLogo">
+            <!-- <a href="./index.html"><img src="./img/logo (2).png"></a> -->
+            <i class="fas fa-user-alt fa-3x"></i>
+            <h3 class="adminName">Admin Name</h3>
+        <!-- </a> -->
+        </a>
+        <button class="btn">Register New Property <i class="fas fa-house-user"></i></button>
+        <div class="authentication display-flex">
+            <a href="./login.html" class="authentication-link display-flex">
+                <div class="authentication-text">
+                    <p>Logout</p>
+                </div>
+                <i class="fas fa-sign-out-alt"></i>
+            </a>    
+        </div>
+    </header>
+
+    <div class="admin-main">
+        <div class="admin-main-navbar">
+            <ul>
+                <li><a href="#dashboard"> Dashboard</a></li>    
+                <li><a href="#property">Your Property</a></li>
+                <li><a href="#">Personal Information</a></li>
+            </ul>
+        </div>
+        <div class="admin-main-page">
+            <div id="dashboard">
+                <h2><span class="large red">D</span>ashboard</h2>
+                <p><strong>Name : </strong> Akash Chandra</p>
+                <p><strong>Address : </strong> New Area Sasaram</p>
+                <p><strong>Mobile : </strong> 6205240095</p>
+                <p><strong>email : </strong> akashchandra8554@gmail.com</p>
+            </div>
+
+            <div id="property">
+                <div class="dispay-heading">
+                    <h2><span class="large red">Y</span>our Property...</h2>
+                </div>
+                <div class="display-box display-flex">
+                    <i class="fas fa-edit fa-2x edit"></i>
+                    <i class="fas fa-trash-alt fa-2x delete"></i>
+                    <div class="display-box-image">
+                        <img src="./img/Untitled design (1).png" alt="IMAGE">
+                    </div>
+                    <div class="display-box-details">
+                        <h2>Name of the place</h2>
+                        <p>New Area Sasaram, Bihar</p>
+                        <p>PIN : 821115</p>
+                        <p>Price &#x20b9; 5000/- Monthly</p>
+                        <button class="btn display-box-btn" > Contact Now</button>
+                    </div>
+                </div>
+                <div class="display-box display-flex">
+                    <i class="fas fa-edit fa-2x edit"></i>
+                    <i class="fas fa-trash-alt fa-2x delete"></i>
+                    <div class="display-box-image">
+                        <img src="./img/Untitled design (1).png" alt="IMAGE">
+                    </div>
+                    <div class="display-box-details">
+                        <h2>Name of the place</h2>
+                        <p>New Area Sasaram, Bihar</p>
+                        <p>PIN : 821115</p>
+                        <p>Price &#x20b9; 5000/- Monthly</p>
+                        <button class="btn display-box-btn" > Contact Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer-content">
+        <h3>Rent Home</h3>
+        <div class="socials">
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+        </div>
+        <div class="footer-bottom">
+            <p>
+                2022 &copy; RentHome by ........
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

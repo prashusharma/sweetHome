@@ -1,0 +1,174 @@
+<%- include("./partials/header")%>
+
+<%- include("./partials/navbar")%>
+
+    <div class="main-div">
+        <!-- <header class="display-flex">
+            <div class="logo">
+                <a href="./index.html"><img src="/img/logo (2).png"></a>
+            </div>
+
+            <div class="authentication display-flex">
+                <a href="./login.html" class="authentication-link display-flex">
+                    <div class="authentication-text">
+                        Login / SignUp
+                    </div>
+                    <i class="fas fa-user-plus"></i>
+                </a>
+            </div>
+        </header> -->
+
+        <div class="search-div display-flex overflow-hidden py-5">
+            <div class="search-left display-flex">
+                <h2><span class="large red">S</span>earch by Location</h2>
+                <form action="" class="w-100 scale-2">
+                    <div class="input-group mb-3 border rounded-pill p-2 overflow-hidden bg-white shadow-sm">
+                        <input type="search" placeholder="What're you searching for?" aria-describedby="button-addon3"
+                            class="form-control bg-none border-0">
+                        <div class="input-group-append border-0">
+                            <button id="button-addon3" type="button" class=" btn btn-link text-success"><i
+                                    class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+                <button class="btn scale-2 rounded-pill btn-outline-secondary px-4 py-2 shadow border">Search</button>
+            </div>
+            <div class="search-right">
+                <img src="/img/Untitled design (1).png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div
+        class="information  d-flex align-items-center justify-content-around owl-carousel owl-theme border-top border-bottom">
+        <div class="info-box display-flex p-3 py-5 item mx-auto my-5 shadow border rounded" style="max-width: 330px;">
+            <i class="fas fa-map-marker-alt fa-2x"></i>
+            <h2>Dharmshala</h2>
+            <p>Search by Location</p>
+        </div>
+        <div class="info-box display-flex p-3 py-5 item mx-auto my-5  shadow border rounded" style="max-width: 330px;">
+            <i class="fas fa-map-marker-alt fa-2x"></i>
+            <h2>Gaurakshani</h2>
+            <p>Search by Location</p>
+        </div>
+        <div class="info-box display-flex p-3 py-5 item mx-auto my-5  shadow border rounded" style="max-width: 330px;">
+            <i class="fas fa-map-marker-alt fa-2x"></i>
+            <h2>New Area</h2>
+            <p>Search by Location</p>
+        </div>
+    </div>
+
+    <div class="top5-display display-flex mx-2">
+        <div class="dispay-heading" style="max-width: 840px;">
+            <h2><span class="large red">T</span>op Verified Places...</h2>
+        </div>
+
+        <div class="card mb-5 p-2 scale-2 shadow" style="max-width: 840px;">
+            <div class="row g-0">
+                <div
+                    class="col-md-4 d-flex justify-content-centr align-items-center px-2 col-sm-7 mx-auto rounded border overflow-hidden">
+                    <img src="/img/Untitled design (1).png" class="img-fluid rounded scale-2" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title mb-2"><a href="./detail.html">Name of the place</a> <span
+                                class="verified p-2 ps-5">verified</span>
+                        </h5>
+                        <div class="star_rating mb-2">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            &nbsp;
+                            <span class="card-text">Rated 5/5 (1 Review)</span>
+                        </div>
+                        <p class="card-text my-0"><span><i class="fas fa-map-pin text-danger"
+                                    style="font-size: 18px;"></i></span> 821115, New Area Sasaram, Bihar</p>
+                        <p class="my-0 mb-1">Price: <del class="text-danger">&#x20b9; 6000/Monthly</del> <span> &#x20b9;
+                                5000/- Monthly</span></p>
+                        <div class="mt-2">
+                            <a class="btn btn-sm btn-outline-primary scale-2" href="/detail"><i
+                                    class="fas fa-info text-warning"></i>
+                                &nbsp; See Detail</a> &nbsp; &nbsp;
+                            <a href="callto:878443676753" class="btn btn-sm btn-outline-success scale-2"><i
+                                    class="fas fa-phone text-primary"></i> &nbsp; Call Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-5 p-2 scale-2 shadow" style="max-width: 840px;">
+            <div class="row g-0">
+                <div
+                    class="col-md-4 d-flex justify-content-centr align-items-center px-2 col-sm-7 mx-auto rounded border overflow-hidden">
+                    <img src="/img/Untitled design (1).png" class="img-fluid rounded scale-2" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title mb-2"><a href="./detail.html">Name of the place</a>
+                        </h5>
+                        <div class="star_rating mb-2">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            &nbsp;
+                            <span class="card-text">Rated 5/5 (1 Review)</span>
+                        </div>
+                        <p class="card-text my-0"><span><i class="fas fa-map-pin text-danger"
+                                    style="font-size: 18px;"></i></span> 821115, New Area Sasaram, Bihar</p>
+                        <p class="my-0 mb-1">Price: <del class="text-danger">&#x20b9; 6000/Monthly</del> <span>
+                                &#x20b9; 5000/- Monthly</span></p>
+                        <div class="mt-2">
+                            <a class="btn btn-sm btn-outline-primary scale-2" href="/detail"><i
+                                    class="fas fa-info text-warning"></i>
+                                &nbsp; See Detail</a> &nbsp; &nbsp;
+                            <a href="callto:878443676753" class="btn btn-sm btn-outline-success scale-2"><i
+                                    class="fas fa-phone text-primary"></i> &nbsp; Call Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a class="btn btn-primary btn-block rounded-pill" href="/searchresults">Show more</a>
+    </div>
+
+    <%- include("./partials/footer")%>
+
+<script src="/script/navScript.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".owl-carousel").owlCarousel({
+            loop: true,
+            margin: 20,
+            nav: false,
+            dots: false,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                300: {
+                    items: 1,
+                },
+                600: {
+                    items: 2,
+                },
+                1000: {
+                    items: 3,
+                },
+            },
+        });
+
+        
+    });
+</script>
+</body>
+
+</html>
+    

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <title>Login</title>
+</head>
+<body>
+    <header class="display-flex">
+        <div class="logo">
+            <a href="./index.html"><img src="./img/logo (2).png"></a>
+        </div>
+
+        <div class="authentication display-flex">
+            <a href="./register.html" class="authentication-link display-flex">
+                <div class="authentication-text">
+                    <p>Login / SignUp</p>
+                </div>
+                <i class="fas fa-user-plus"></i>
+            </a>    
+        </div>
+    </header>
+
+    <div class="login-main display-flex">
+        <!-- <div class="login-main-left">
+            <img src="./img/loginImg/1.png" alt="">
+        </div> -->
+        
+        <form class="login-form display-flex">
+            
+            <h2><span class="large red">L</span>ogIn</h2>
+            <label for="email">Email<span class="red">*</span></label>
+            <input type="email" placeholder="Enter your email" id="email">
+            <label for="password">Password<span class="red">*</span></label>
+            <input type="password" placeholder="Enter your password" id="password">
+            <!-- <button class="btn login-btn">LogIn</button> -->
+            <div class="form-footer">
+                <button class="btn login-btn">LogIn</button>
+                <div class="form-footer-links display-flex">
+                    <a href="#" class="red form-link">Forgot Password</a>
+                    <a href="./register.html" class="red form-link">New Member? SignUp</a>
+                </div>
+            </div>
+        
+        </form>
+    </div>
+
+    <footer class="footer-content">
+        <h3>Rent Home</h3>
+        <div class="socials">
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+        </div>
+        <div class="footer-bottom">
+            <p>
+                2022 &copy; RentHome by ........
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
