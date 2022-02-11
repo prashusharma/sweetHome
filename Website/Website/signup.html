@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create account</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-grid.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="signup.css" />
+  </head>
+  <body>
+    <div class="main-box d-flex justify-content-center w-100 h-100">
+      <div class="my-2 p-1">
+        <div class="p-3">
+          <!-- <div class="mb-3 text-center">
+                <h5><span>L</span>ogin</h5>
+            </div> -->
+          <form class="text-center">
+            <div class="form_wrapper">
+              <div class="form_container">
+                <div class="title_container h5" style="font-weight: bolder">
+                  <h2><span>C</span>reate <span>A</span>ccount</h2>
+                </div>
+                <div class="row clearfix">
+                  <div class="">
+                    <form>
+                      <div class="row clearfix">
+                        <div class="col_half">
+                          <div class="input_field">
+                            <span
+                              ><i aria-hidden="true" class="fa fa-user"></i
+                            ></span>
+                            <input
+                              type="text"
+                              name="name"
+                              placeholder="First Name*"
+                            />
+                          </div>
+                        </div>
+                        <div class="col_half">
+                          <div class="input_field">
+                            <span
+                              ><i aria-hidden="true" class="fa fa-user-plus"></i
+                            ></span>
+                            <input
+                              type="text"
+                              name="name"
+                              placeholder="Last Name*"
+                              required
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="input_field">
+                        <span
+                          ><i aria-hidden="true" class="fa fa-phone"></i
+                        ></span>
+                        <input
+                          type="number"
+                          name="email"
+                          placeholder="Mobile number*"
+                          required
+                        />
+                      </div>
+                      <div class="input_field">
+                        <span
+                          ><i aria-hidden="true" class="fa fa-envelope"></i
+                        ></span>
+                        <input type="email" name="email" placeholder="Email" />
+                      </div>
+                      <div class="input_field">
+                        <span
+                          ><i
+                            aria-hidden="true"
+                            class="fa fa-eye"
+                            onclick="showPassword(this)"
+                          ></i
+                        ></span>
+                        <input
+                          type="password"
+                          class="myInput"
+                          name="password"
+                          placeholder="Password*"
+                          autocomplete="new-password"
+                          required
+                        />
+                      </div>
+                      <div class="input_field">
+                        <span
+                          ><i
+                            aria-hidden="true"
+                            class="fa fa-eye"
+                            onclick="showPassword(this)"
+                          ></i
+                        ></span>
+                        <input
+                          type="password"
+                          class="myInput"
+                          name="password"
+                          placeholder="Comfirm Password*"
+                          required
+                        />
+                      </div>
+
+                      <div class="input_field radio_option">
+                        <input type="radio" name="radiogroup1" id="rd1" />
+                        <label for="rd1">Male</label>
+                        <input type="radio" name="radiogroup1" id="rd2" />
+                        <label for="rd2">Female</label>
+                      </div>
+                      <!-- <div class="input_field select_option">
+                              <select>
+                                <option>Select a country</option>
+                                <option>Option 1</option>
+                                <option>Option 2</option>
+                              </select>
+                              <div class="select_arrow"></div>
+                            </div> -->
+                      <div class="input_field checkbox_option">
+                        <input type="checkbox" id="cb1" />
+                        <label for="cb1"
+                          >I agree with <a href="#" style="text-decoration:none;">terms and conditions</a></label
+                        >
+                      </div>
+                      <input class="button" type="submit" value="Register" />
+                      <a href="#" style="text-decoration: none; font-size: 0.8rem;">Already a member? Sign in</a>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function showPassword(para) {
+        var x = para.parentElement.nextElementSibling;
+        if (x.type === "password") {
+          x.type = "text";
+        } else {
+          x.type = "password";
+        }
+      }
+    </script>
+  </body>
+</html>

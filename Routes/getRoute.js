@@ -7,7 +7,13 @@ const searchController = require("../controller/searchController")
 //HOME ROUTES
 route.get("/", homeController.index);
 route.get("/home", homeController.index);
+route.get("/signin", (req, res)=>{
+    res.render("signin");
+})
 
+route.get("/signup", (req, res)=>{
+    res.render("signup");
+})
 
 //Details Routes
 route.get("/detail",detailController.index)
