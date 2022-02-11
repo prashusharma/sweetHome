@@ -1,11 +1,10 @@
 {
   "name": "website",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js  -e js,ejs"
+    "start": "nodemon server.js"
   },
   "author": "",
   "license": "ISC",
@@ -13,5 +12,14 @@
     "ejs": "^3.1.6",
     "express": "^4.17.2",
     "nodemon": "^2.0.15"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prashusharma/sweetHome.git"
+  },
+  "bugs": {
+    "url": "https://github.com/prashusharma/sweetHome/issues"
+  },
+  "homepage": "https://github.com/prashusharma/sweetHome#readme",
+  "description": ""
 }

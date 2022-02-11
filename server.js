@@ -10,7 +10,6 @@ app.use( express.static('static'))
 //Router SetUp
 app.use(routes); 
 
-
 //view engine
 app.set("view engine", "ejs")
 
