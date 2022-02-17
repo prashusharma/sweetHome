@@ -11,8 +11,8 @@ route.get("/signin", (req, res)=>{
     res.render("signin");
 })
 
-route.get("/signup", (req, res)=>{
-    res.render("signup");
+route.get("/register", (req, res)=>{
+    res.render("signup" );
 })
 
 //Details Routes

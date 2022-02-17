@@ -433,7 +433,7 @@ p {
     border-left: none;
   }
   .remember_me {
-    padding-bottom: 20px;
+    padding-bottom: 320px;
   }
 }
 @media (max-width: 400px) {
