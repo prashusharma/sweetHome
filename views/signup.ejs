@@ -22,13 +22,17 @@
     <link rel="stylesheet" href="/css/signin.css" />
   </head>
   <body>
-    <div class="main-box overflow-hidden  d-flex justify-content-center w-100 h-100" >
+    <div
+      class="main-box overflow-hidden d-flex justify-content-center w-100 h-100"
+    >
       <div class="p-1">
         <div class="p-2">
-          <!-- <div class="mb-3 text-center">
-                <h5><span>L</span>ogin</h5>
-            </div> -->
-          <form class="text-center">
+          <form
+            class="text-center"
+            method="post"
+            action="/register"
+            id="register"
+          >
             <div class="form_wrapper">
               <div class="form_container">
                 <div class="title_container h5" style="font-weight: bolder">
@@ -38,109 +42,158 @@
                   <div class="">
                     <form>
                       <div class="row clearfix">
-                        <div class="col_half">
+                        <div class="col_half position-relative">
                           <div class="input_field">
                             <span
                               ><i aria-hidden="true" class="fa fa-user"></i
                             ></span>
                             <input
                               type="text"
-                              name="name"
+                              name="firstName"
                               placeholder="First Name*"
                             />
                           </div>
+                          <div
+                            class="invalid-feedback d-block position-absolute bottom-0 text-start firstName"
+                          >
+                          
+                          </div>
                         </div>
-                        <div class="col_half">
+                        <div class="col_half position-relative">
                           <div class="input_field">
                             <span
                               ><i aria-hidden="true" class="fa fa-user"></i
                             ></span>
                             <input
                               type="text"
-                              name="name"
+                              name="lastName"
                               placeholder="Last Name*"
-                              required
                             />
+                          </div>
+                          <div
+                            class="invalid-feedback d-block position-absolute bottom-0 text-start lastName"
+                          >
+                          
                           </div>
                         </div>
                       </div>
-                      <div class="input_field">
-                        <span
-                          ><i aria-hidden="true" class="fa fa-phone"></i
-                        ></span>
-                        <input
-                          type="number"
-                          name="email"
-                          placeholder="Mobile number*"
-                          required
-                        />
-                      </div>
-                      <div class="input_field">
-                        <span
-                          ><i aria-hidden="true" class="fa fa-envelope"></i
-                        ></span>
-                        <input type="email" name="email" placeholder="Email" />
-                      </div>
-                      <div class="input_field">
-                        <span
-                          ><i
-                            aria-hidden="true"
-                            class="fa fa-eye"
-                            onclick="showPassword(this)"
-                          ></i
-                        ></span>
-                        <input
-                          type="password"
-                          class="myInput"
-                          name="password"
-                          placeholder="Password*"
-                          autocomplete="new-password"
-                          required
-                        />
-                      </div>
-                      <div class="input_field">
-                        <span
-                          ><i
-                            aria-hidden="true"
-                            class="fa fa-eye"
-                            onclick="showPassword(this)"
-                          ></i
-                        ></span>
-                        <input
-                          type="password"
-                          class="myInput"
-                          name="password"
-                          placeholder="Comfirm Password*"
-                          required
-                        />
+                      <div class="position-relative overflow-hidden mb-2">
+                        <div class="input_field">
+                          <span
+                            ><i aria-hidden="true" class="fa fa-phone"></i
+                          ></span>
+                          <input
+                            type="number"
+                            name="mobile"
+                            placeholder="Mobile number*"
+                          />
+                        </div>
+                        <div
+                          class="invalid-feedback d-block position-absolute bottom-0 text-start mobile"
+                        >
+                        
+                        </div>
                       </div>
 
-                      <!-- <div class="input_field radio_option">
-                        <input type="radio" name="radiogroup1" id="rd1" />
-                        <label for="rd1">Male</label>
-                        <input type="radio" name="radiogroup1" id="rd2" />
-                        <label for="rd2">Female</label>
-                      </div> -->
-                      <!-- <div class="input_field select_option">
-                              <select>
-                                <option>Select a country</option>
-                                <option>Option 1</option>
-                                <option>Option 2</option>
-                              </select>
-                              <div class="select_arrow"></div>
-                            </div> -->
+                      <div class="position-relative overflow-hidden mb-2">
+                        <div class="input_field">
+                          <span
+                            ><i aria-hidden="true" class="fa fa-envelope"></i
+                          ></span>
+                          <input
+                            type="email"
+                            name="email"
+                            placeholder="Email"
+                          />
+                        </div>
+                        <div
+                          class="invalid-feedback d-block position-absolute bottom-0 text-start email"
+                        >
+                        
+                        </div>
+                      </div>
+                      <div class="position-relative overflow-hidden mb-2">
+                        <div class="input_field">
+                          <span
+                            ><i
+                              aria-hidden="true"
+                              class="fa fa-eye"
+                              onclick="showPassword(this)"
+                            ></i
+                          ></span>
+                          <input
+                            type="password"
+                            class="myInput"
+                            name="password"
+                            placeholder="Password*"
+                            autocomplete="new-password"
+                            minlength="6"
+                          />
+                        </div>
+                        <div
+                          class="invalid-feedback d-block position-absolute bottom-0 text-start password"
+                        >
+                        
+                        </div>
+                      </div>
+
+                      <div class="position-relative overflow-hidden mb-2">
+                        <div class="input_field">
+                          <span
+                            ><i
+                              aria-hidden="true"
+                              class="fa fa-eye"
+                              onclick="showPassword(this)"
+                            ></i
+                          ></span>
+                          <input
+                            type="password"
+                            class="myInput"
+                            name="confirmPassword"
+                            placeholder="Comfirm Password*"
+                          />
+                        </div>
+                        <div
+                          class="invalid-feedback d-block position-absolute bottom-0 text-start confirmPassword"
+                        >
+                          
+                        </div>
+                      </div>
+                      
                       <div class="input_field checkbox_option text-start mb-3">
-                        <input type="checkbox" id="cb1" />
+                        <input type="checkbox" name="agreement" id="cb1" required/>
                         <label for="cb1"
-                          >I agree with <a href="#" style="text-decoration:none;">terms and conditions</a></label
+                          >I agree with
+                          <a href="#" style="text-decoration: none"
+                            >terms and conditions</a
+                          ></label
                         >
                       </div>
                       <input class="button" type="submit" value="Register" />
-                      <a href="/signin" style="text-decoration: none; font-size: 0.8rem;">Already a member? Sign in</a>
+                      <a
+                        href="/signin"
+                        style="text-decoration: none; font-size: 0.8rem"
+                        >Already a member? Sign in</a
+                      >
                       <div class="social mt-3">
-                        <a href="#"><img src="/img/logo/facebook.png" alt="" style="width: 30px;"></a>
-                        <a href="#"><img src="/img/logo/google.png" alt="" style="width: 30px;"></a>
-                        <a href="#"><img src="/img/logo/instagram.png" alt="" style="width: 30px;"></a>
+                        <a href="#"
+                          ><img
+                            src="/img/logo/facebook.png"
+                            alt=""
+                            style="width: 30px"
+                        /></a>
+                        <a href="#"
+                          ><img
+                            src="/img/logo/google.png"
+                            alt=""
+                            style="width: 30px"
+                        /></a>
+                        <a href="#"
+                          ><img
+                            src="/img/logo/instagram.png"
+                            alt=""
+                            style="width: 30px"
+                        /></a>
                       </div>
                     </form>
                   </div>
@@ -151,7 +204,7 @@
         </div>
       </div>
     </div>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
       function showPassword(para) {
         var x = para.parentElement.nextElementSibling;
@@ -161,6 +214,39 @@
           x.type = "password";
         }
       }
+
+      $(document).ready(function () {
+        $("#register").submit(function (e) {
+          e.preventDefault();
+          let that = $(this);
+          $.each($('.invalid-feedback'), function (indexInArray, valueOfElement) { 
+            $(valueOfElement).html("");
+          });
+        
+          $.ajax({
+            type: "POST",
+            url: "/register",
+            data: {
+              firstName: that.find("input[name='firstName']").val(),
+              lastName: that.find("input[name='lastName']").val(),
+              mobile: that.find("input[name='mobile']").val(),
+              email: that.find("input[name='email']").val(),
+              password: that.find("input[name='password']").val(),
+              confirmPassword: that.find("input[name='confirmPassword']").val(),
+            }, 
+            dataType: "json",
+            success: function (response) {
+              if(response.message == "error"){
+                $.each(response, function (indexInArray, valueOfElement) { 
+                  $('.'+indexInArray).html(valueOfElement);
+                });
+              }else{
+                  location = '/';
+              }
+            },
+          });
+        });
+      });
     </script>
   </body>
 </html>

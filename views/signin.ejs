@@ -18,6 +18,9 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="/css/signup.css" />
     <link rel="stylesheet" href="/css/signin.css" />
   </head>
@@ -28,23 +31,28 @@
           <!-- <div class="mb-3 text-center">
                 <h5><span>L</span>ogin</h5>
             </div> -->
-          <form class="text-center">
+          <div class="text-center" >
             <div class="form_wrapper">
               <div class="form_container">
                 <div class="title_container h5" style="font-weight: bolder">
                   <h2><span>S</span>ign <span>I</span>n</h2>
                 </div>
+                <div class="alert alert-success alert-dismissible fade in">
+                  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                  <strong>Success!</strong> This alert box could indicate a successful or positive action.
+                </div>
                 <div class="row clearfix">
                   <div class="">
-                    <form>
+                    <form id="login">
                       
-                      <div class="input_field">
+                      <div class="input_field ">
                         <span
                           ><i aria-hidden="true" class="fa fa-envelope"></i
                         ></span>
                         <input type="email" name="email" placeholder="Email or Mobile number" />
+                        
                       </div>
-                      <div class="input_field">
+                      <div class="input_field ">
                         <span
                           ><i
                             aria-hidden="true"
@@ -60,18 +68,16 @@
                           autocomplete="new-password"
                           required
                         />
+                        
                       </div>
                       
-                      
-                      
+                     
                       <input class="button" type="submit" value="Sign in" />
-                      <a href="/signup" style="text-decoration: none; font-size: 0.8rem;">New here? Create an account</a>
+                      <a href="/register" style="text-decoration: none; font-size: 0.8rem;">New here? Create an account</a>
                       <div class="text-center">
                         <p class="text-muted">OR connect with</p>
                       </div>
-                        <!-- <p class="text-center info text-muted">
-                          Use you social media credential to sign in.
-                        </p> -->
+                        
                       <div class="social">
                         <a href="#"><img src="/img/logo/facebook.png" alt="" style="width: 30px;"></a>
                         <a href="#"><img src="/img/logo/google.png" alt="" style="width: 30px;"></a>
@@ -83,11 +89,14 @@
                 </div>
               </div>
             </div>
-          </form>
+          </div>
         </div>
       </div>
     </div>
 
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
       function showPassword(para) {
         var x = para.parentElement.nextElementSibling;
@@ -97,6 +106,37 @@
           x.type = "password";
         }
       }
-    </script>
+
+      $(document).ready(function () {
+        $("#login").submit(function (e) {
+          e.preventDefault();
+          let that = $(this);
+          $.each($('.invalid-feedback'), function (indexInArray, valueOfElement) { 
+            $(valueOfElement).html("");
+          });
+        
+          $.ajax({
+            type: "POST",
+            url: "/login",
+            data: {
+              email: that.find("input[name='email']").val(),
+              password: that.find("input[name='password']").val(),
+            }, 
+            dataType: "json",
+            success: function (response) {
+              // if(response.message == "error"){
+                
+              // }else{
+              //     location = '/';
+              // }
+              console.log(response.message);
+            },
+          });
+        });
+      });
+
+      
+
+    </scriptz>
   </body>
 </html>
