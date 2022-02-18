@@ -35,10 +35,17 @@ const userController = {
     catch (err) {
       const sendErrArray = {};
       sendErrArray["message"] = "error";
+      if(err.code == 11000)
+      {
+        sendErrArray["email"] = "Email already registered";
+      }
+      if(err.errors){
+        Object.values(err.errors).forEach(element => { 
+          sendErrArray[element.properties.path] = element.properties.message;
+        });
+      }
 
-      Object.values(err.errors).forEach(element => { 
-        sendErrArray[element.properties.path] = element.properties.message;
-      });
+      
 
       res.status("200").json(sendErrArray);
       
@@ -51,15 +58,14 @@ const userController = {
     if(user){
       const result = await bcrypt.compare(req.body.password, user.password);
       if(result){
-
         res.json({"message" : "success"})
       }
       else{
-        res.json({"message" : "Either email or password is incorrect"})
+        res.json({"message" : ""})
       }
     }
     else{
-      res.json({"message" : "Either email or password is incorrect"})
+      res.json({"message" : ""})
     }
     
     
