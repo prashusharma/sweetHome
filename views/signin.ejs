@@ -20,7 +20,7 @@
     />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="/css/signup.css" />
     <link rel="stylesheet" href="/css/signin.css" />
   </head>
@@ -34,12 +34,12 @@
           <div class="text-center" >
             <div class="form_wrapper">
               <div class="form_container">
-                <div class="title_container h5" style="font-weight: bolder">
+                <div class="title_container h5" style="font-weight: bolder; font-size: 2.0rem;">
                   <h2><span>S</span>ign <span>I</span>n</h2>
                 </div>
-                <div class="alert alert-success alert-dismissible fade in">
+                <div class="alert alert-danger alert-dismissible fade in" style="display: none;">
                   <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                  <strong>Success!</strong> This alert box could indicate a successful or positive action.
+                  <strong>Ooop !</strong>  Either your userId or password is invalid.
                 </div>
                 <div class="row clearfix">
                   <div class="">
@@ -73,15 +73,15 @@
                       
                      
                       <input class="button" type="submit" value="Sign in" />
-                      <a href="/register" style="text-decoration: none; font-size: 0.8rem;">New here? Create an account</a>
+                      <a href="/register" style="text-decoration: none; font-size: 1.3rem;">New here? Create an account</a>
                       <div class="text-center">
                         <p class="text-muted">OR connect with</p>
                       </div>
                         
                       <div class="social">
-                        <a href="#"><img src="/img/logo/facebook.png" alt="" style="width: 30px;"></a>
-                        <a href="#"><img src="/img/logo/google.png" alt="" style="width: 30px;"></a>
-                        <a href="#"><img src="/img/logo/instagram.png" alt="" style="width: 30px;"></a>
+                        <a href="#"><img src="/img/logo/facebook.png" alt="facebook" style="width: 30px;"></a>
+                        <a href="#"><img src="/img/logo/google.png" alt="google" style="width: 30px;"></a>
+                        <a href="#"><img src="/img/logo/instagram.png" alt="instagram" style="width: 30px;"></a>
                       </div>
 
                     </form>
@@ -106,10 +106,11 @@
           x.type = "password";
         }
       }
-
+      
       $(document).ready(function () {
         $("#login").submit(function (e) {
           e.preventDefault();
+          
           let that = $(this);
           $.each($('.invalid-feedback'), function (indexInArray, valueOfElement) { 
             $(valueOfElement).html("");
@@ -124,12 +125,13 @@
             }, 
             dataType: "json",
             success: function (response) {
-              // if(response.message == "error"){
+              if(response.message != "success"){
+                // $(".alert")
                 
-              // }else{
-              //     location = '/';
-              // }
-              console.log(response.message);
+              }else{
+                location = "/"
+              }
+              // console.log(response.message);
             },
           });
         });
@@ -137,6 +139,6 @@
 
       
 
-    </scriptz>
+    </script>
   </body>
 </html>
