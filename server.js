@@ -23,8 +23,6 @@ app.use(regRoutes);
 //view engine
 app.set("view engine", "ejs")
 
-
-
 app.listen(port, ()=> {
     console.log("server started");
 });

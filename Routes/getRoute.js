@@ -2,7 +2,8 @@ const express = require("express");
 const route = express.Router();
 const homeController = require("../controller/homeController")
 const detailController = require("../controller/detailController")
-const searchController = require("../controller/searchController")
+const searchController = require("../controller/searchController");
+const homeDetailsController = require("../controller/homeDetailsController");
 
 //HOME ROUTES
 route.get("/", homeController.index);
@@ -16,11 +17,10 @@ route.get("/register", (req, res)=>{
 })
 
 //Details Routes
-route.get("/detail",detailController.index)
+route.get("/detail/:id",detailController.index)
 
 //SearchResult Routes
 route.get("/searchresults",searchController.index)
-
 
 
 

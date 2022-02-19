@@ -47,7 +47,7 @@ const userController = {
 
   loginUser : async (req, res)=>{
     const user = await userModel.findOne({email : req.body.email});
-    const sendErrArray = {};
+   
     if(user){
       const result = await bcrypt.compare(req.body.password, user.password);
       if(result){
@@ -55,11 +55,11 @@ const userController = {
         res.json({"message" : "success"})
       }
       else{
-        res.json({"message" : "Either email or password is incorrect"})
+        res.json({"message" : ""})
       }
     }
     else{
-      res.json({"message" : "Either email or password is incorrect"})
+      res.json({"message" : ""})
     }
     
     
