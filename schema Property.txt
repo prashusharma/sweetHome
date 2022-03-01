@@ -1,0 +1,64 @@
+address
+:
+"New area Sasaram Rohtas Bihar"
+
+price
+:
+5000
+
+oldPrice
+:
+6000
+
+mobile
+:
+"9155767010"
+
+roomType
+:
+"Bachelors"
+
+maintainenceCharge
+:
+100
+
+star
+:
+4
+
+totalReview
+:
+20
+
+verified
+:
+true
+
+thumbnail
+:
+"./thumbnail.jpg"
+
+pic
+:
+"./pics.jpg"
+
+
+
+1  Property address
+   Name , address , mobile number , add current location -> location automatic or manual
+
+
+
+2  Property description
+	Property type-> Flat or Single rooms, 
+   1. Flat -> no of rooms, Kitchen, bathroom, hall, toilet, 
+	Preference available -> bed, AC, Fan, Cooler, Electricity-> extra bill or included in rent, Rent of room, 		discount provided, Family or bachelors or both
+
+   2. Single rooms -> Preference available, Bathroom shared or seperated, Electricity bill extra or included
+-----------  
+
+3  Property image 
+	Property image, Thumbnail image, Image from outside of the house, Extra msg from the owner if any.
+
+
+
