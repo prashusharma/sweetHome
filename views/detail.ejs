@@ -1,6 +1,6 @@
 <%- include("./partials/header")%>
 <%- include("./partials/navbar")%>
-
+<%home%>
 <div class="container" style="min-height: 500px;">
     <div class="row mt-3">
         <div class="col-md-8 my-2">
@@ -9,16 +9,16 @@
                 <div class="row g-0">
                     <div
                         class="col-md-4 d-flex justify-content-centr align-items-center px-2 col-sm-7 mx-auto rounded border overflow-hidden">
-                        <img src="./img/Untitled design (1).png" class="img-fluid rounded scale-2" alt="...">
+                        <img src="/img/<%= home.thumbnail%>" class="img-fluid rounded scale-2" alt="...">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                            <h5 class="card-title mb-2">Name of the place
+                            <h5 class="card-title mb-2"><%= home.address%>
                             </h5>
                             <p class="card-text my-0"><span><i class="fas fa-map-pin text-danger"
-                                        style="font-size: 18px;"></i></span> 821115, New Area Sasaram, Bihar</p>
-                            <p class="my-0 mb-1">Price: <del class="text-danger">&#x20b9; 6000/Monthly</del> <span>
-                                    &#x20b9; 5000/- Monthly</span></p>
+                                        style="font-size: 18px;"></i></span> 821115, <%= home.address%></p>
+                            <p class="my-0 mb-1">Price: <del class="text-danger">&#x20b9; <%= home.oldPrice  %>/Monthly</del> <span>
+                                    &#x20b9; <%= home.price  %>/- Monthly</span></p>
                             <div class="mt-2">
                                 <a href="callto:878443676753" class="btn btn btn-outline-success scale-2"><i
                                         class="fas fa-phone text-primary"></i> &nbsp; Call Now</a> &nbsp; &nbsp;

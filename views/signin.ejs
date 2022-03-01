@@ -112,9 +112,9 @@
           e.preventDefault();
           
           let that = $(this);
-          $.each($('.invalid-feedback'), function (indexInArray, valueOfElement) { 
-            $(valueOfElement).html("");
-          });
+          // $.each($('.invalid-feedback'), function (indexInArray, valueOfElement) { 
+          //   $(valueOfElement).html("");
+          // });
         
           $.ajax({
             type: "POST",
@@ -127,11 +127,10 @@
             success: function (response) {
               if(response.message != "success"){
                 // $(".alert")
-                
+                $(".alert").css("display", "block");
               }else{
-                location = "/"
+                location = "/admin/"
               }
-              // console.log(response.message);
             },
           });
         });

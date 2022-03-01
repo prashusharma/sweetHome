@@ -1,5 +1,7 @@
 const userModel = require("../DataBase/model/userSchema");
 const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
+
 
 const userController = {
   createUser: async (req, res) => { 
@@ -28,7 +30,8 @@ const userController = {
     
     try {
         const savedUser = await newUser.save();   //saving user to dataBase
-        res.cookie('userId',savedUser._id, { maxAge: 900000, httpOnly: true }); //setting cookies
+        const token = await savedUser.createToken();
+        res.cookie('id',token, { maxAge: 900000, httpOnly: true, secure:true }); //setting cookies
         res.status("200").json({"message": "success"});
 
     } 
@@ -47,19 +50,20 @@ const userController = {
 
   loginUser : async (req, res)=>{
     const user = await userModel.findOne({email : req.body.email});
-    const sendErrArray = {};
+   
     if(user){
       const result = await bcrypt.compare(req.body.password, user.password);
       if(result){
-
+        const token = await user.createToken();
+        res.cookie('id',token, { maxAge: 900000, httpOnly: true, secure:true });
         res.json({"message" : "success"})
       }
       else{
-        res.json({"message" : "Either email or password is incorrect"})
+        res.json({"message" : ""})
       }
     }
     else{
-      res.json({"message" : "Either email or password is incorrect"})
+      res.json({"message" : ""})
     }
     
     

@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const jwt = require("jsonwebtoken")
 const { isEmail } = require("validator")
 
 const userSchema = new mongoose.Schema({
@@ -34,11 +35,21 @@ const userSchema = new mongoose.Schema({
         type : String,
         required : [true, "Password and Confirm Password not match"],
         trim:true
-    }
+    },
+    tokens : [
+        {
+            token: String
+        }
+    ]
 
 })
 
-
+userSchema.methods.createToken = async function(){
+    const token = await jwt.sign({id:this._id}, "secret");
+    this.tokens = this.tokens.concat({token});
+    await this.save();
+    return token;
+}
 
 const userModel = mongoose.model("registeredUser", userSchema);
 

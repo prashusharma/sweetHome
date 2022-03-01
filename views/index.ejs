@@ -62,76 +62,48 @@
         <div class="dispay-heading" style="max-width: 840px;">
             <h2><span class="large red">T</span>op Verified Places...</h2>
         </div>
+        <% homes.forEach(home => { %>
+            <div class="card mb-5 p-2 scale-2 shadow" style="max-width: 840px;">
+                <div class="row g-0">
+                    <div
+                        class="col-md-4 d-flex justify-content-centr align-items-center px-2 col-sm-7 mx-auto rounded border overflow-hidden" style="height: 180px;">
+                        <img src="/img/<%= home.thumbnail%>" class="img-fluid rounded scale-2" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title mb-2"><a href="./detail.html"><%= home.address%></a> 
+                                <% if(home.verified){ %>
+                                    <span class="verified p-2 ps-5">verified</span>
+                                <% } %>
+                            </h5>
+                            <div class="star_rating mb-2">
+                                <% for (let index = 0; index < home.star; index++) { %>
+                                    <i class="fas fa-star text-warning"></i>
+                                <% } %> 
 
-        <div class="card mb-5 p-2 scale-2 shadow" style="max-width: 840px;">
-            <div class="row g-0">
-                <div
-                    class="col-md-4 d-flex justify-content-centr align-items-center px-2 col-sm-7 mx-auto rounded border overflow-hidden">
-                    <img src="/img/Untitled design (1).png" class="img-fluid rounded scale-2" alt="...">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title mb-2"><a href="./detail.html">Name of the place</a> <span
-                                class="verified p-2 ps-5">verified</span>
-                        </h5>
-                        <div class="star_rating mb-2">
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            &nbsp;
-                            <span class="card-text">Rated 5/5 (1 Review)</span>
-                        </div>
-                        <p class="card-text my-0"><span><i class="fas fa-map-pin text-danger"
-                                    style="font-size: 18px;"></i></span> 821115, New Area Sasaram, Bihar</p>
-                        <p class="my-0 mb-1">Price: <del class="text-danger">&#x20b9; 6000/Monthly</del> <span> &#x20b9;
-                                5000/- Monthly</span></p>
-                        <div class="mt-2">
-                            <a class="btn btn-sm btn-outline-primary scale-2" href="/detail"><i
-                                    class="fas fa-info text-warning"></i>
-                                &nbsp; See Detail</a> &nbsp; &nbsp;
-                            <a href="callto:878443676753" class="btn btn-sm btn-outline-success scale-2"><i
-                                    class="fas fa-phone text-primary"></i> &nbsp; Call Now</a>
+                                <% for (let index = home.star; index < 5; index++) { %>
+                                    <i class="far fa-star text-warning"></i>
+                                <% } %> 
+                                &nbsp;
+                                <span class="card-text">Rated <%= home.star  %>/5 (<%= home.totalReview  %> Review)</span>
+                            </div>
+                            <p class="card-text my-0"><span><i class="fas fa-map-pin text-danger"
+                                        style="font-size: 18px;"></i></span> 821115, <%= home.address%></p>
+                            <p class="my-0 mb-1">Price: <del class="text-danger">&#x20b9; <%= home.oldPrice  %>/Monthly</del> <span> &#x20b9;
+                                <%= home.price  %>/- Monthly</span></p>
+                            <div class="mt-2">
+                                <a class="btn btn-sm btn-outline-primary scale-2" href="/detail/<%= home._id%>"><i
+                                        class="fas fa-info text-warning"></i>
+                                    &nbsp; See Detail</a> &nbsp; &nbsp;
+                                <a href="callto:878443676753" class="btn btn-sm btn-outline-success scale-2"><i
+                                        class="fas fa-phone text-primary"></i> &nbsp; Call Now</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="card mb-5 p-2 scale-2 shadow" style="max-width: 840px;">
-            <div class="row g-0">
-                <div
-                    class="col-md-4 d-flex justify-content-centr align-items-center px-2 col-sm-7 mx-auto rounded border overflow-hidden">
-                    <img src="/img/Untitled design (1).png" class="img-fluid rounded scale-2" alt="...">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title mb-2"><a href="./detail.html">Name of the place</a>
-                        </h5>
-                        <div class="star_rating mb-2">
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            &nbsp;
-                            <span class="card-text">Rated 5/5 (1 Review)</span>
-                        </div>
-                        <p class="card-text my-0"><span><i class="fas fa-map-pin text-danger"
-                                    style="font-size: 18px;"></i></span> 821115, New Area Sasaram, Bihar</p>
-                        <p class="my-0 mb-1">Price: <del class="text-danger">&#x20b9; 6000/Monthly</del> <span>
-                                &#x20b9; 5000/- Monthly</span></p>
-                        <div class="mt-2">
-                            <a class="btn btn-sm btn-outline-primary scale-2" href="/detail"><i
-                                    class="fas fa-info text-warning"></i>
-                                &nbsp; See Detail</a> &nbsp; &nbsp;
-                            <a href="callto:878443676753" class="btn btn-sm btn-outline-success scale-2"><i
-                                    class="fas fa-phone text-primary"></i> &nbsp; Call Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+            </div> 
+        <% }); %>
+        
 
         <a class="btn btn-primary btn-block rounded-pill" href="/searchresults">Show more</a>
     </div>
